@@ -9,7 +9,6 @@ import { errorHandler, notFound } from "./middlewares/errorMiddleware.js";
 
 const app = express();
 
-
 connectDB();
 app.use(cors());
 app.use(helmet());
@@ -23,7 +22,6 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
 app.listen(
-    PORT,
-    console.log(`Server running in ${process.env.NODE_ENV} at port ${PORT}`)
-  );
-  
+  PORT,
+  console.log(`Server running in ${process.env.NODE_ENV} at port ${PORT}`)
+);
